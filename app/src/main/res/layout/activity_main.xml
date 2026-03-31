@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SYSTEM: OFFLINE"
+        android:textColor="#FF0000"
+        android:textSize="12sp"
+        android:fontFamily="monospace"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/inputArea"
+        android:layout_below="@id/status"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/chatBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00FF41"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:text="[GHOST PROTOCOL INITIALIZED...]\n" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/inputArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#1A1A1A"
+        android:padding="5dp">
+        <EditText
+            android:id="@+id/msgInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type shadow message..."
+            android:textColor="#FFF"
+            android:background="@android:color/transparent"
+            android:textColorHint="#444"
+            android:padding="10dp"/>
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEND"
+            android:backgroundTint="#333"/>
+    </LinearLayout>
+</RelativeLayout>
